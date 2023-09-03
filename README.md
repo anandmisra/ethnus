@@ -24,9 +24,7 @@ During this internship, I gained hands-on experience with a wide array of techno
 * GitHub
 
 ## How to Explore This Repository
-This GitHub repository serves as a portfolio of my work during the Ethnus internship. You can navigate through the various projects, view the source code, and access the deployed websites to see the results of my efforts.
-
-Website: https://anandmisra.github.io/ethnus/
+This GitHub repository serves as a portfolio of my work during the Ethnus internship. You can navigate through the various projects, view the source code, and access the deployed [website](https://anandmisra.github.io/ethnus/ "Index page for all my tasks") to see the results of my efforts.
 
 Feel free to explore the projects and reach out to me if you have any questions or would like to connect further. Thank you for visiting, and I hope you enjoy exploring my internship journey!
 
