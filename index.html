@@ -4,211 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ethnus Internship</title>
-    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./swiper-bundle.min.css">
-
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Poppins', sans-serif;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-        body nav {
-            padding-left: 30px; 
-            display: flex;
-            justify-content: left;
-            align-items: center;
-            min-height: 100vh;
-            background-image: linear-gradient(rgba(0,0,0,0.3),transparent), url(./imgs/bg.jpg);
-            background-position: center;
-            background-size: cover;
-        }
-
-        nav ul {
-            position: fixed;
-            bottom: 50px;
-            display: flex;
-            flex-direction: column;
-            gap: 25px;
-        }
-
-        nav ul li {
-            position: relative;
-            list-style: none;
-        }
-
-        nav ul li a {
-            position: relative;
-            padding-left: 0px;
-            font-size: 30px;
-            text-decoration: none;
-            line-height: 1em;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: transparent;
-            z-index: 1000000;
-            -webkit-text-stroke: 1px rgb(255, 255, 255);
-        }
-
-        nav ul li a::before {
-            content: attr(data-text);
-            position: absolute; 
-            color: var(--clr);
-            width: 0;
-            overflow: hidden;
-            transition: 0.5s;
-            border-right: 8px solid var(--clr);
-            -webkit-text-stroke: 1px var(--clr);
-        }
-
-        nav ul li a:hover::before {
-            width: 100%;
-            filter: drop-shadow(0 0 20px var(--clr));
-        }
-
-        a.active {
-            color: var(--clr);
-            -webkit-text-stroke: 2px var(--clr);
-            filter: drop-shadow(0 0 20px var(--clr));
-        }
-
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100px;
-            background: transparent;
-            align-items: baseline;
-            z-index: 5000;
-            transition: 0.5s;
-            display: flex;
-            padding: 0 px 25px;
-        }
-
-        header .logo{
-            position: fixed;
-            right: 2%;
-            top: 40%;
-            font-family: 'Permanent Marker', cursive;
-            align-items: center;
-            color: #fff;
-            text-transform: uppercase;
-            justify-content: center;
-            font-size: 70px;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.5s;
-        }
-
-        p#hm1 {
-            position: relative;
-            padding: 20px 25px;
-            top: 0px;
-            left: 10px;
-            justify-content: center;
-            align-items: center;
-            font-size: 28px;
-            color: #fff;
-            font-family: 'Permanent Marker', cursive;
-        }
-
-        .bgc {
-            height: 80px;
-            background-color: black;
-            display: flex;
-        }
-
-        .bgc .logo {
-            position: relative;
-            left: 1%;
-            top: 0.1%;
-            font-size: 18px;
-        }
-
-        #home_content p {
-            border: 2px solid rgba(0, 254, 93, 0.47);
-            border-radius: 10px;
-            background-color: black;
-            opacity: 0.4;
-            position: absolute;
-            bottom: 10%;
-            right: 1.3%;
-            padding: 30px;
-            font-family: 'Poppins', sans-serif;
-            font-size: 20px;
-            align-items: center;
-            justify-content:end;
-            color: white;
-            text-align: right;
-        }
-
-        section {
-            display: flex;
-            flex-direction: column;
-            padding: 5%;
-            min-height: 100vh; 
-            display: flex; 
-            justify-content:start; 
-            align-items: center; 
-            background: rgb(40, 5, 219);
-            font-size: 100px; 
-            color: #fff;
-            font-weight: 700;
-            background-color: #000000;
-        }
-
-
-
-
-
-
-
-        #HTML h3 {
-            filter: drop-shadow(0 0 25px #e84d00);
-            z-index: 7000;
-        }
-        .html_pic {
-            width: 100px;
-            height: 80px;
-        }
-
-        #CSS h3 {
-            filter: drop-shadow(0 0 25px #0049e8);
-            z-index: 7000;
-        }
-        .css_pic {
-            width: 100px;
-            height: 80px;
-        }
-
-        #BS h3 {
-            filter: drop-shadow(0 0 25px #a600e8);
-            z-index: 7000;
-        }
-        .bs_pic {
-            width: 100px;
-            height: 80px;
-        }
-
-        #JS h3 {
-            filter: drop-shadow(0 0 25px #e8d900);
-            z-index: 7000;
-        }
-        .js_pic {
-            width: 100px;
-            height: 80px;
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 </head>
 <body>
     <header>
@@ -216,6 +17,11 @@
         <a href="#" class="logo">
             <p id="hm2">Task sheet</p>
         </a>
+        <div class="media-icons">
+            <a href="https://github.com/anandmisra" target="_blank"><i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i></a>
+            <a href="https://www.linkedin.com/in/anandmisra11/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
+            <a href="https://twitter.com/anu_misra11" target="_blank"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+        </div>
     </header>
 
     <nav class="nav">
@@ -251,27 +57,188 @@
             <H3>HTML
                 <img class="html_pic" src="./imgs/html.svg">
             </H3>
+            <section class="sec_inside">
+
+                <div class="swiper HTMlswiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>Task 1</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/HTML-Task1.html" target="_blank"><button class="html-slide" type="button" >Code</button></a>
+                            <a href="./HTML-Task1" target="_blank"><button class="html-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 2</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/HTML-Task2.html" target="_blank"><button class="html-slide" type="button" >Code</button></a>
+                            <a href="./HTML-Task2" target="_blank"><button class="html-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 3</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/HTML-Task3.html" target="_blank"><button class="html-slide" type="button" >Code</button></a>
+                            <a href="./HTML-Task3" target="_blank"><button class="html-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 4</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/HTML-Task4.html" target="_blank"><button class="html-slide" type="button" >Code</button></a>
+                            <a href="./HTML-Task4" target="_blank"><button class="html-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 5</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/HTML-Task5.html" target="_blank"><button class="html-slide" type="button" >Code</button></a>
+                            <a href="./HTML-Task5" target="_blank"><button class="html-slide" type="button" >Ouput</button></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
         </section>
+
         <section class="section" id="CSS">
             <H3>CSS
                 <img class="css_pic" src="./imgs/css.svg">
             </H3>
-
+            <section class="sec_inside">
+                <div class="swiper CSSswiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>Task 1</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task1.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T1style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task1" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 2</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task2.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T2style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task2" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 3</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task3.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T3style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task3" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 4</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task4.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T4style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task4" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 5</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task5.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T5style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task5" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 6</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task6.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T6style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task6" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 7</h2>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-Task7.html" target="_blank"><button class="css-slide" type="button" >HTML Code</button></a>
+                            <a href="https://raw.githubusercontent.com/anandmisra/ethnus-internship/main/CSS-T7style.css" target="_blank"><button class="css-slide" type="button" >CSS Code</button></a>
+                            <a href="./CSS-Task7" target="_blank"><button class="css-slide" type="button" >Ouput</button></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
         </section>
+
         <section class="section" id="BS">
             <H3>BS
                 <img class="bs_pic" src="./imgs/bs.svg">
             </H3>
+            <section class="sec_inside">
+                <div class="swiper BSswiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>Task 1</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 2</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 3</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 4</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 5</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 6</h2>
+                            <a href="#BS"><button class="bs-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
         </section>
+
         <section class="section" id="JS">
             <H3>JS
                 <img class="js_pic" src="./imgs/js.svg">
             </H3>
+            <section class="sec_inside">
+                <div class="swiper JSswiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <h2>Task 1</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 2</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 3</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 4</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 5</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 6</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 7</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                        <div class="swiper-slide">
+                            <h2>Task 8</h2>
+                            <a href="#JS"><button class="js-slide" type="button" >Not yet assigned</button></a>
+                        </div>
+                    </div>
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-pagination"></div>
+                </div>
+            </section>
         </section>
     </main>
     
     <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
-
     <script>
     	$(document).ready(function(){
     		$(window).on('scroll', function(){
@@ -282,6 +249,23 @@
     			}
     		});
     	});
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+    var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+        },
+        navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+        },
+    });
     </script>
 </body>
 </html>
