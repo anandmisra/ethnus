@@ -4,6 +4,75 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.loader {
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 25000000;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  background: black;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.loader p{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: end;
+  font-size: 15px;
+  justify-content: center;
+  padding-bottom: 100px;
+}
+
+.loader address{
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: end;
+  padding-bottom: 50px;
+  justify-content: center;
+  padding-left: 10px;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-family: 'Pacifico', cursive;
+  filter: drop-shadow(0 0 25px #00e070);
+}
+
+.loader--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader::after {
+  content: "";
+  width: 75px;
+  height: 75px;
+  border: 15px solid white;
+  border-top-color: #00e070;
+  filter: drop-shadow(0 0 25px #00e070);
+  border-radius: 50%;
+  animation: loading 1s ease infinite;
+  z-index: 20000000;
+}
+
+@keyframes loading {
+  from { 
+    transform: rotate(0turn);
+  }
+  to {
+    transform: rotate(1turn);
+  }
 }
 
 html {
@@ -57,7 +126,7 @@ nav ul li a::before {
     -webkit-text-stroke: 1px var(--clr);
 }
 
-nav ul li a:hover::before {
+nav ul li a:hover:not(.active)::before {
     width: 100%;
     filter: drop-shadow(0 0 20px var(--clr));
 }
@@ -76,7 +145,7 @@ header {
     height: 100px;
     background: transparent;
     align-items: baseline;
-    z-index: 5000;
+    z-index: 1000000;
     transition: all 0.5s ease-in-out;
     display: flex;
     padding: 0 px 25px;
@@ -122,9 +191,25 @@ p#hm1 {
 }
 
 .bgc {
-    height: 80px;
-    background-color: black;
-    display: flex;
+  height: 80px;
+  background-color: black;
+  display: flex;
+}
+
+.bgc_home {
+  filter: drop-shadow(0 0 5px #00e070);
+}
+.bgc_html {
+  filter: drop-shadow(0 0 5px #e84d00);
+}
+.bgc_css {
+  filter: drop-shadow(0 0 5px #0049e8);
+}
+.bgc_bs {
+  filter: drop-shadow(0 0 5px #a600e8);
+}
+.bgc_js {
+  filter: drop-shadow(0 0 5px #e8d900);
 }
 
 .bgc .media-icons {
@@ -185,7 +270,6 @@ p#hm1 {
       color: #ffffff;
       margin: 0;
       padding: 0;
-      z-index: 10000;
 }
 .swiper {
     position: relative;
@@ -338,7 +422,6 @@ p#hm1 {
     position: relative;
     left: 12%;
     filter: drop-shadow(0 0 25px #e84d00);
-    z-index: 7000;
 }
 .html_pic {
     width: 100px;
@@ -349,7 +432,6 @@ p#hm1 {
     position: relative;
     left: 12%;
     filter: drop-shadow(0 0 25px #0049e8);
-    z-index: 7000;
 }
 .css_pic {
     width: 100px;
@@ -360,7 +442,6 @@ p#hm1 {
     position: relative;
     left: 12%;
     filter: drop-shadow(0 0 25px #a600e8);
-    z-index: 7000;
 }
 .bs_pic {
     width: 100px;
@@ -371,7 +452,6 @@ p#hm1 {
     position: relative;
     left: 12%;
     filter: drop-shadow(0 0 25px #e8d900);
-    z-index: 7000;
 }
 .js_pic {
     width: 100px;
