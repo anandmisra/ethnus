@@ -13,7 +13,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <script>
+        
         window.addEventListener("load", () => {
+        $(this).scrollTop(0);
         setTimeout(()=>{
                 document.querySelector(".loader").classList.add("loader--hidden");
             }, 2000);
@@ -257,6 +259,17 @@
                 <h1>Arrivederci!</h1>
                 <!-- <p></p> -->
             </div>
+            <div class="media-icons-end">
+                <a href="https://github.com/anandmisra" target="_blank">
+                    <i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/anandmisra11/" target="_blank">
+                    <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i>
+                </a>
+                <a href="https://twitter.com/anu_misra11" target="_blank">
+                    <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i>
+                </a>
+            </div>
         </section>
     </main>
     
@@ -276,51 +289,41 @@
     <script>        
         $(document).ready(function(){
             $(window).on('scroll', function(){
+                
+                $(".active").removeClass('active');
         
                 let homesec = document.querySelector(".home_section");
-                let homeheight = homesec.offsetHeight;
-                let homeoffset = homesec.offsetTop - 150;
+                let homeheight = homesec.offsetTop + homesec.offsetHeight/3;
 
                 let htmlsec = document.querySelector(".HTML-section");
-                let htmlheight = htmlsec.offsetHeight;
-                let htmloffset = htmlsec.offsetTop - 150;
+                let htmlheight = htmlsec.offsetTop + htmlsec.offsetHeight/3;
                 
                 let csssec = document.querySelector(".CSS-section");
-                let cssheight = csssec.offsetHeight;
-                let cssoffset = csssec.offsetTop - 150;
+                let cssheight = csssec.offsetTop + csssec.offsetHeight/3;
                 
                 let bssec = document.querySelector(".BS-section");
-                let bsheight = bssec.offsetHeight;
-                let bsoffset = bssec.offsetTop - 150;
+                let bsheight = bssec.offsetTop + bssec.offsetHeight/3;
                 
                 let jssec = document.querySelector(".JS-section");
-                let jsheight = jssec.offsetHeight;
-                let jsoffset = jssec.offsetTop - 150;
+                let jsheight = jssec.offsetTop + jssec.offsetHeight/3;
                 
-                let above = window.pageYOffset;
+                let upper = window.scrollY;
+                let lower = upper + window.innerHeight;
                 
-                if (above >= homeoffset && above < homeoffset+homeheight) {
+                if (homeheight >= upper && homeheight < lower) {
                     $(".home_nav").addClass('active');
-                    $(".html_nav").removeClass('active');
                 }
-                if (above >= htmloffset && above < htmloffset+htmlheight) {
+                if (htmlheight >= upper && htmlheight < lower) {
                     $('.html_nav').addClass('active');
-                    $(".home_nav").removeClass('active');
-                    $(".css_nav").removeClass('active');
                 }
-                if (above >= cssoffset && above < cssoffset+cssheight) {
+                if (cssheight >= upper && cssheight < lower) {
                     $('.css_nav').addClass('active');
-                    $(".html_nav").removeClass('active');
-                    $(".bs_nav").removeClass('active');
                 }
-                if (above >= bsoffset && above < bsoffset+bsheight) {
+                if (bsheight >= upper && bsheight < lower) {
                     $('.bs_nav').addClass('active');
-                    $(".css_nav").removeClass('active');
-                    $(".js_nav").removeClass('active');
                 }
-                if (above >= jsoffset && above < jsoffset+jsheight){
+                if (jsheight >= upper && jsheight < lower){
                     $('.js_nav').addClass('active');
-                    $(".bs_nav").removeClass('active');
                 }
                     
             });
