@@ -1,10 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
     scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -173,7 +174,7 @@ header {
     align-items: center;
     justify-content: start;
     z-index: 1000000;
-    transition: all 0.5s ease-in-out;
+    transition: opacity 0.5s, visibility 0.5s;
     display: flex;
     flex-direction: row;
     padding: 0 px 25px;
@@ -203,9 +204,11 @@ p#hm1 {
 }
 
 .bgc {
-  height: 60px;
-  background-color: black;
+  height: 70px;
+  padding-bottom: 10px;
+  background: linear-gradient(#000000, #000000, transparent);
   display: flex;
+  transition: opacity 0.5s, visibility 0.5s;
 }
 
 .media-icons {
@@ -221,8 +224,36 @@ p#hm1 {
 }
 
 .bgc .media-icons {
-    position: inherit;
-    right: -50px;
+  position: inherit;
+  right: -50px;
+}
+
+.media-icons-end {
+  padding: 10px;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.media-icons-header {
+  position: fixed;
+  right: 10px;
+  top: -60px;
+  padding: 5px;
+  align-items: center;
+  justify-content: baseline;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+.bgc .media-icons-header {
+  position: inherit;
+  top: 10px;
 }
 
 .bgc_home {
@@ -289,7 +320,12 @@ p#hm1 {
   background: rgb(40, 5, 219);
   color: #fff;
   background-color: #000000;
-  background-image: url(./imgs/bg.jpg);
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.5), 
+    rgba(0, 0, 0, 0.5)), url(./imgs/bg.jpg);
+  
+  filter: brightness(120%);
+  background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
@@ -319,24 +355,28 @@ p#hm1 {
   display: block;
   align-items: center;
   justify-content: center;
-    padding: 40px 15px 20px;
+  color: white;
+  text-align: center;
+  padding: 40px 15px 20px;
+}
+
+.end-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .end_content h1 {
-    color: white;
-    text-align: center;
     font-size: 50px;
-    padding-bottom: 10px;
   }
 
-.media-icons-end {
-    position: relative;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+.end-content p {
+  font-size: 12px;
+  padding-bottom: 20px;
 }
+
 
 .sec_inside {
   position: relative;
@@ -352,7 +392,7 @@ p#hm1 {
   margin: 0;
   padding: 0;
 }
-.swiper {
+.swiper{
     position: relative;
     width: 55vw;
     max-width: 600px;
@@ -365,6 +405,43 @@ p#hm1 {
   }
 
   
+@media (min-width: 769px) {
+  .media-icons-end {
+    height: 0px;
+    padding: 0px;
+    visibility: hidden;
+    opacity: 0;
+  }
+  
+  button.html-slide:hover {
+    background-color: #ff6822;
+    color: #000000;
+    border: 5px solid #000000;
+    filter: drop-shadow(0 0 25px #ff6619);
+  } 
+
+  button.css-slide:hover {
+    background-color: #2469ff;
+    color: #000000;
+    border: 5px solid #000000;
+    filter: drop-shadow(0 0 25px #0049e8);
+  } 
+  
+  button.bs-slide:hover {
+    background-color: #c126ff;
+    color: #000000;
+    border: 5px solid #000000;
+    filter: drop-shadow(0 0 25px #a600e8);
+  } 
+  
+  button.js-slide:hover {
+    background-color: #fff134;
+    color: #000000;
+    border: 5px solid #000000;
+    filter: drop-shadow(0 0 25px #e8d900);
+  } 
+}
+
 @media (max-width: 768px) {
     .nav {
       display: none;
@@ -378,7 +455,7 @@ p#hm1 {
       height: auto;
       min-width: 275px;
       min-height: 200px;
-      padding-bottom: 60px;
+      padding-top: 60px;
     }
 
     .end-section {
@@ -394,7 +471,15 @@ p#hm1 {
       font-size: 30px;
     }
 
-    .swiper {
+    .end_content p {
+      height: auto;
+      text-align: center;
+      min-width: auto;
+      font-size: 12px;
+      text-wrap: balance;
+    }
+
+    .swiper , .swiper-container {
     position: relative;
       max-width: 450px;
       width: 85vw;
@@ -428,7 +513,7 @@ p#hm1 {
     .home_content {
         text-align: center;
         padding-left: 20px;
-        font-size: 14px;
+        font-size: 18px;
         padding-top: 80px;
         padding-bottom: auto;
     }
@@ -436,21 +521,36 @@ p#hm1 {
     .home_content h1 {
       font-size: 60px;
     }
+
+    .media-icons-header {
+      height: 0px;
+      padding: 0px;
+      visibility: hidden;
+      opacity: 0;
+    }
   } 
 
+
   .HTMlswiper {
+    background: #e84d00;
     filter: drop-shadow(0 0 25px #e84d00);
     border: 5px solid #e84d00;
   }
+
   .CSSswiper {
+    background: #0049e8;
     filter: drop-shadow(0 0 25px #0049e8);
     border: 5px solid #0049e8;
   }
+
   .BSswiper {
+    background: #a600e8;
     filter: drop-shadow(0 0 25px #a600e8);
     border: 5px solid #a600e8;
   }
+  
   .JSswiper {
+    background: #e8d900;
     filter: drop-shadow(0 0 25px #e8d900);
     border: 5px solid #e8d900;
   }
@@ -464,7 +564,7 @@ p#hm1 {
     position: relative;
     height: auto;
     min-height: fit-content;
-    border: 3px solid rgb(0, 0, 0);
+    border: 5px solid rgb(0, 0, 0);
     border-radius: 15px;
     text-align: center;
     font-size: 25px;
@@ -475,26 +575,30 @@ p#hm1 {
   }
 
   .HTML-section .swiper-slide {
-    background-image: linear-gradient(#8f3001c0,transparent), url("./imgs/html-swiperbg.png");
+    background-image: linear-gradient(#ff5500c9,transparent), url("./imgs/html-swiperbg.png");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
   .CSS-section .swiper-slide {
-    background-image: linear-gradient(#002a83bf,transparent), url("./imgs/css-swiperbg.png");
+    background-image: linear-gradient(#0051ffc9,transparent), url("./imgs/css-swiperbg.png");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
   .BS-section .swiper-slide {
-    background-image: linear-gradient(#570079b7,transparent), url("./imgs/bs-swiperbg.png");
+    background-image: linear-gradient(#b700ffc9,transparent), url("./imgs/bs-swiperbg.png");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
   .JS-section .swiper-slide {
-    background-image: linear-gradient(#7f7700bb,transparent), url("./imgs/js-swiperbg.png");
+    background-image: linear-gradient(#ffee00c9,transparent), url("./imgs/js-swiperbg.png");
     background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
   }
 
@@ -517,17 +621,12 @@ p#hm1 {
     width: 70%;
     border-radius: 10px;
     border: 3px solid #ff5d0c;
-    background-color: #e84d007c;
+    background: #000000;
+    color: white;
     margin: 10px;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
-
-  button.html-slide:hover {
-    background-color: #ff6822;
-    color: #000000;
-    filter: drop-shadow(0 0 25px #ff6619);
-  } 
 
   button.css-slide {
     padding: 10px 5px;
@@ -544,17 +643,12 @@ p#hm1 {
     width: 70%;
     border-radius: 10px;
     border: 3px solid #0049e8;
-    background-color: #0049e87c;
+    background-color: #000000;
+    color: white;
     margin: 10px;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
-
-  button.css-slide:hover {
-    background-color: #2469ff;
-    color: #000000;
-    filter: drop-shadow(0 0 25px #0049e8);
-  } 
 
   button.bs-slide {
     padding: 10px 5px;
@@ -571,17 +665,12 @@ p#hm1 {
     width: 70%;
     border-radius: 10px;
     border: 3px solid #a600e8;
-    background-color: #a600e87c;
+    background-color: #000000;
+    color: white;
     margin: 10px;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
-
-  button.bs-slide:hover {
-    background-color: #c126ff;
-    color: #000000;
-    filter: drop-shadow(0 0 25px #a600e8);
-  } 
 
   button.js-slide {
     padding: 10px 5px;
@@ -598,17 +687,12 @@ p#hm1 {
     width: 70%;
     border-radius: 10px;
     border: 3px solid #e8d900;
-    background-color: #e8d9007c;
+    background-color: #000000;
+    color: white;
     margin: 10px;
     transition: all 0.3s ease-in-out;
     overflow: hidden;
   }
-
-  button.js-slide:hover {
-    background-color: #fff134;
-    color: #000000;
-    filter: drop-shadow(0 0 25px #e8d900);
-  } 
   
   .swiper-slide img {
     position: relative;

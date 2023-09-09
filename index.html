@@ -1,8 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+    <meta name="description" content="Explore my MERN Fullstack Developer internship journey and projects with Ethnus.">
+    <meta name="keywords" content="HTML, CSS, JavaScript, MERN, fullstack, Ethnus, Web, development, internship, task, solution">
+    <meta name="author" content="Anand Misra">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Task Sheet</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -13,16 +19,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
     <script>
-        
+
         window.addEventListener("load", () => {
         $(this).scrollTop(0);
         setTimeout(()=>{
                 document.querySelector(".loader").classList.add("loader--hidden");
-            }, 2000);
+            }, 1000);
         });
+
     </script>
+
 </head>
+
 <body>
+
     <div class="loader">
         <div class="loader-animation"></div>
         <div class="loader-content">
@@ -32,19 +42,42 @@
     </div>
 
     <header>
+
         <a href="#" class="logo">
             <p id="hm1">Task sheet</p>
             <p id="hm2">Ethnus</p>
         </a>
+
         <div class="media-icons">
-            <a href="https://github.com/anandmisra" target="_blank"><i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i></a>
-            <a href="https://www.linkedin.com/in/anandmisra11/" target="_blank"><i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i></a>
-            <a href="https://twitter.com/anu_misra11" target="_blank"><i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i></a>
+            <a href="https://github.com/anandmisra" target="_blank">
+                <i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anandmisra11/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://twitter.com/anu_misra11" target="_blank">
+                <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i>
+            </a>
         </div>
+
+        <div class="media-icons-header">
+            <a href="https://github.com/anandmisra" target="_blank">
+                <i class="fa-brands fa-square-github fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/anandmisra11/" target="_blank">
+                <i class="fa-brands fa-linkedin fa-2xl" style="color: #ffffff;"></i>
+            </a>
+            <a href="https://twitter.com/anu_misra11" target="_blank">
+                <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i>
+            </a>
+        </div>
+
     </header>
+
 
     <nav class="nav">
         <ul class="nav_list">
+
             <li style="--clr: #00e070" class="nav_item">
                 <a href="#home" data-text="&nbsp;&nbsp;Home" class="home_nav nav_link">&nbsp;&nbsp;Home&nbsp;</a>
             </li>
@@ -60,6 +93,7 @@
             <li style="--clr: #e8d900" class="nav_item">
                 <a href="#JS" data-text="&nbsp;&nbsp;JS" class="js_nav nav_link">&nbsp;&nbsp;JS&nbsp;</a>
             </li>
+
         </ul>
     </nav>
 
@@ -75,10 +109,9 @@
                 <img class="html_pic" src="./imgs/html.svg">
             </H3>
             <section class="sec_inside">
-
                 <div class="swiper HTMlswiper mySwiper">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide">
+                        <div class="swiper-slide HTMLslide">
                             <h2>Task 1</h2>
                             <a href="./content/HTML/Task1.txt" target="_blank"><button class="html-slide" type="button" >Code</button></a>
                             <a href="./HTML-Task1" target="_blank"><button class="html-slide" type="button" >Output</button></a>
@@ -257,7 +290,7 @@
         <section class="end-section">
             <div class="end_content ">
                 <h1>Arrivederci!</h1>
-                <!-- <p></p> -->
+                <p>Anand Misra - MERN Fullstack Developer</p>
             </div>
             <div class="media-icons-end">
                 <a href="https://github.com/anandmisra" target="_blank">
@@ -269,6 +302,9 @@
                 <a href="https://twitter.com/anu_misra11" target="_blank">
                     <i class="fa-brands fa-square-x-twitter fa-2xl" style="color: #ffffff;"></i>
                 </a>
+            </div>
+            <div class="end_content ">
+                <!-- <p class="copyright"></p> -->
             </div>
         </section>
     </main>
