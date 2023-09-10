@@ -317,7 +317,8 @@ p#hm1 {
 }
 
 .home_section {
-  height: 100vh;
+  min-height: 100vh;
+  min-height: 100dvh;
   position: relative;
   display: flex; 
   flex-direction: column;
@@ -515,6 +516,14 @@ p#hm1 {
       padding-top: 60px;
     }
 
+    .home_section {
+      height: auto;
+      min-width: 275px;
+      min-height: 100vh;
+      min-height: 100dvh;
+      padding-top: 60px;
+    }
+
     .end-section {
       height: auto;
       min-width: 275px;
@@ -570,11 +579,14 @@ p#hm1 {
     }
 
     .home_content {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
         text-align: center;
         padding-left: 20px;
         font-size: 18px;
-        padding-top: 80px;
-        padding-bottom: auto;
     }
 
     .home_content h1 {
